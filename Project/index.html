@@ -13,26 +13,31 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
-	<header>
-	<!--Declaración del menú navegación-->
-		<nav>
-			<ul>
-				<a href="#"><li>MaterializeCss Frameware</li></a>
-			</ul>
-			<img id="logo" src="img/logo.png">
-			<ul>
-				<a href="#"><li>Introducción</li></a>
-				<a href="#"><li>Youtube</li></a>
-			</ul>
-		</nav>
-	</header>
-	<!-- Declaración del fondo de pantalla fija con cuadro informativo -->
-	<section id="banner"></section>
-	<!-- cuadro informativa para el usuario -->
-	<section id="scroll">
-		<p>Scroll Down<i class="fa fa-hand-o-down" aria-hidden="true"></i></p>
-	</section>
+
+	<div id="wrapper">
+		<!-- Carga el fondo para scroll -->
+		<<div id="fondo"></div>
+		<header>
+		<!--Declaración del menú navegación-->
+			<nav>
+				<ul>
+					<a href="#"><li>MaterializeCss Frameware</li></a>
+				</ul>
+				<img id="logo" src="img/logo.png">
+				<ul>
+					<a href="#"><li>Introducción</li></a>
+					<a href="#"><li>Youtube</li></a>
+				</ul>
+			</nav>
+		</header>
+		<!-- cuadro informativa para el usuario -->
+		<div id="etiqueta_scroll">
+			<div id="scrolldown">
+				<p>Scroll Down<i class="fa fa-hand-o-down" aria-hidden="true"></i></p>
+			</div>
+		</div>
+	</div>
 	<!-- Empieza el cuerpo de la página -->
-	<section id="body"></section>
+	<div id="container"></div>
 </body>
 </html>

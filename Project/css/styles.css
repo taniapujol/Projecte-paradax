@@ -7,18 +7,27 @@
 	padding: 0;
 }
 /*Css del fondo de la web para hacer scroll*/
-section#banner{
+#fondo{
+	position: fixed;
 	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: -2;
 	background-image: url(../img/fondo.jpg);
-	background-attachment: contain;
-	background-position: center;
+	background-size: cover;
+	background-position: center 0px;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 /*Css de la barra de navegación antes de hacer scroll*/
 header{
 	position: fixed;
 	width: 100%;
 	height: 70px;
+	top:0px;
+	left: 0px;
+	z-index: 1;
 	background-color: transparent;
 	-webkit-transition: background-color .5s;
 	-moz-transition: background-color .5s;
@@ -44,11 +53,8 @@ ul li{
 	padding: 2px;
 	font-family: 'VT323', monospace;
 }
-ul a{
-	color: #F3F3F3;
-	text-decoration: none;
-}
-img#logo{
+ul a{text-decoration: none;}
+#logo{
 	float:left;
 	display: block;
 	margin-left: 30px;
@@ -58,20 +64,27 @@ img#logo{
 	-moz-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
 	-o-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
 }
-section#scroll{
+#etiqueta_scroll{
+	width: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+#scrolldown{
 	margin: auto;
 	width: 200px;
 	height: 60px;
+	color:#aea8f0;
 }
-section#scroll p{
-	background-color: red;
+#scrolldown p{
 	font-family: 'Pacifico', cursive;
+	font-size: 1.5em;	
 	color: #fff;
 }
-section#scroll i{padding-left: 20px}
-#body{
+#scrolldown i{padding-left: 20px}
+#container{
 	width: 100%;
 	min-height: 900px;
 	max-height: 1200px;
+	z-index: -1;
 	background-image: url(../img/fondo2.jpg);
 }
