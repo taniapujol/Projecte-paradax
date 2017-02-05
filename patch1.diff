@@ -1,0 +1,169 @@
+From 23ae071db6948671498b51bdd77f78e78ba80976 Mon Sep 17 00:00:00 2001
+From: "SURFACE\\ainat" <ainatpujolrigual@gmail.com>
+Date: Sun, 5 Feb 2017 12:39:25 +0100
+Subject: [PATCH] Primera part finalitzada
+
+---
+ Project/css/styles.css | 33 +++++++++++++++++++++++++++++----
+ Project/index.html     | 20 +++++++++++++++-----
+ Project/js/script.js   | 18 +++++++++---------
+ 3 files changed, 53 insertions(+), 18 deletions(-)
+
+diff --git a/Project/css/styles.css b/Project/css/styles.css
+index 000ced1..6efbfc8 100644
+--- a/Project/css/styles.css
++++ b/Project/css/styles.css
+@@ -11,6 +11,7 @@
+ 	position: fixed;
+ 	width: 100%;
+ 	height: 100%;
++	min-height: initial;
+ 	top: 0px;
+ 	left: 0px;
+ 	z-index: -2;
+@@ -72,19 +73,43 @@ ul a{text-decoration: none;}
+ #scrolldown{
+ 	margin: auto;
+ 	width: 200px;
+-	height: 60px;
++	height: 70px;
+ 	color:#aea8f0;
+ }
+ #scrolldown p{
+ 	font-family: 'Pacifico', cursive;
+-	font-size: 1.5em;	
++	font-size: 1.5em;
+ 	color: #fff;
+ }
+ #scrolldown i{padding-left: 20px}
+ #container{
+ 	width: 100%;
+-	min-height: 900px;
+-	max-height: 1200px;
++	height: 100%;
++	min-height: 800px;
+ 	z-index: -1;
+ 	background-image: url(../img/fondo2.jpg);
++	background-position: center 0px;
++	background-repeat: no-repeat;
++	overflow: hidden;
++}
++/*llista del containaer*/
++.menu{
++	float: right;
++	margin-top: 200px;
++	width: 50%;
++	z-index: 1;
++}
++.menu ul{list-style-type: none;}
++.menu li{
++	float: right;
++	margin: 10px;
++	padding: 10px;
++	width: 50%;
++	border: solid 1px rgb(114, 209, 244);
++	border-radius: 20px 0 20px 0;
++	background-color:rgb(114, 209, 244);
++	text-align: center;
++	text-shadow: 2px 2px 8px #fff;
++	font-family: 'Pacifico', cursive;
++	font-size: 2em;
+ }
+diff --git a/Project/index.html b/Project/index.html
+index e65401a..a7ed9ae 100644
+--- a/Project/index.html
++++ b/Project/index.html
+@@ -16,17 +16,18 @@
+ 
+ 	<div id="wrapper">
+ 		<!-- Carga el fondo para scroll -->
+-		<<div id="fondo"></div>
+-		<header>
++		<div id="fondo"></div>
+ 		<!--Declaración del menú navegación-->
++		<header>
+ 			<nav>
+ 				<ul>
+ 					<a href="#"><li>MaterializeCss Frameware</li></a>
+ 				</ul>
+ 				<img id="logo" src="img/logo.png">
+ 				<ul>
+-					<a href="#"><li>Introducción</li></a>
+-					<a href="#"><li>Youtube</li></a>
++					<li><a href="#">Introducció</a></li>
++					<li><a href="#">Youtube</a></li>
++					<li><a href="#">Enllaços</a></li>
+ 				</ul>
+ 			</nav>
+ 		</header>
+@@ -38,6 +39,15 @@
+ 		</div>
+ 	</div>
+ 	<!-- Empieza el cuerpo de la página -->
+-	<div id="container"></div>
++	<div id="container">
++		<div class="menu">
++			<ul>
++				<li>Atribut Color</li>
++				<li>Creem Diseny</li>
++				<li>Efecte Hover</li>
++				<li>Videos</li>
++			</ul>
++		</div>
++	</div>
+ </body>
+ </html>
+diff --git a/Project/js/script.js b/Project/js/script.js
+index db38a1c..0757833 100644
+--- a/Project/js/script.js
++++ b/Project/js/script.js
+@@ -1,12 +1,15 @@
+ $(document).ready(function(){
+-
+ 	//Ajustamos el div sroll al final de la página
+-		var height = $(window).height();
++		var height = $(window).height(),
++				final;
+ 		ajustesiniciales();
+ 		function ajustesiniciales() {
+-			$("#etiqueta_scroll").css({"margin-top":height - 80 + "px"});
++			$("#etiqueta_scroll").css({"margin-top":height - 70 + "px"});
++			$("#logo").css({"margin-top": "150px", "width": "350px","height":"350px"});
++			$("header").css({"background-color": "transparent"});
++			$("nav a").css({"color":"transparent"});
++		};
+ 
+-		}
+ // Aplicamos el efecto scroll de transición del icono al menu
+ 	var flag = false;
+ 	var scroll;
+@@ -17,7 +20,7 @@ $(document).ready(function(){
+ 		if(scroll > 200){
+ 			if(!flag){
+ 				$("#logo").css({"margin-top": "-5px", "width": "50px","height":"50px"});
+-				$("header").css({"background-color": "#000"});
++				$("header").css({"background-color": "transparent"});
+ 				$("nav a").css({"color":"#fff"});
+ 				flag = true;
+ 			}
+@@ -30,10 +33,8 @@ $(document).ready(function(){
+ 				flag = false;
+ 			}
+ 		}
+-
+-
+ 	});
+-	(document).scroll(function(){
++	$(document).scroll(function(){
+ 			var scrollTop = $(this).scrollTop();
+ 			var pixels = scrollTop / 70;
+ 
+@@ -46,5 +47,4 @@ $(document).ready(function(){
+ 			}
+ 
+ 		});
+-
+ });
+-- 
+2.8.4.windows.1
+
