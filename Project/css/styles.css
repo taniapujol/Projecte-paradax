@@ -6,6 +6,13 @@
 	margin: 0;
 	padding: 0;
 }
+/*css para la animación*/
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
 /*Css del fondo de la web para hacer scroll*/
 #fondo{
 	position: fixed;
@@ -54,7 +61,9 @@ ul li{
 	padding: 2px;
 	font-family: 'VT323', monospace;
 }
-ul a{text-decoration: none;}
+ul li a{
+	text-decoration: none;
+}
 #logo{
 	float:left;
 	display: block;
@@ -112,4 +121,36 @@ ul a{text-decoration: none;}
 	text-shadow: 2px 2px 8px #fff;
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
+}
+.uno {
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 0s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 0s;
+}
+.dos {
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 5s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 5s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 5s;
+}
+.tres {
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 10s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 10s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 10s;
+}
+.cuatro{
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 15s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 15s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 15s;
 }

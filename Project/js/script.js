@@ -7,10 +7,11 @@ $(document).ready(function(){
 			$("#etiqueta_scroll").css({"margin-top":height - 70 + "px"});
 			$("#logo").css({"margin-top": "150px", "width": "350px","height":"350px"});
 			$("header").css({"background-color": "transparent"});
+			$("nav li").css({"color":"transparent"});
 			$("nav a").css({"color":"transparent"});
 		};
 
-// Aplicamos el efecto scroll de transición del icono al menu
+	// Aplicamos el efecto scroll de transición del icono al menu
 	var flag = false;
 	var scroll;
 
@@ -19,14 +20,16 @@ $(document).ready(function(){
 		if(scroll > 200){
 			if(!flag){
 				$("#logo").css({"margin-top": "-5px", "width": "50px","height":"50px"});
-				$("header").css({"background-color": "transparent"});
+				$("header").css({"background-color":"#000"});
+				$("nav li").css({"color":"#fff"});
 				$("nav a").css({"color":"#fff"});
 				flag = true;
 			}
 		}else{
 			if(flag){
 				$("#logo").css({"margin-top": "150px", "width": "350px","height":"350px"});
-				$("header").css({"background-color": "transparent"});
+				$("header").css({"background-color":"transparent"});
+				$("nav li").css({"color":"transparent"});
 				$("nav a").css({"color":"transparent"});
 
 				flag = false;
@@ -45,20 +48,13 @@ $(document).ready(function(){
 
 			};
 
-		});
-
-		// empezamos la animación de menu
-		var posicion = $(document).scrollTop;
-		var fin = $(window).height()
-		ajustes_menu();
-		function ajustes_menu(){
-			if (posicion == fin){
-				$('.menu if uno').addClass('animated 5s bounceOutLeft');
-				$('.menu if dos').addClass('animated 10s bounceInRight');
-				$('.menu if tres').addClass('animated 10s bounceInRight');
-				$('.menu if cuatro').addClass('animated 10s bounceInRight');
-			};
-		};
+	});
+	$(document).ready(function() {
+	    $('.post').addClass("hidden").viewportChecker({
+	        classToAdd: 'visible animated bounceInRight',
+	        offset: 100
+	       });
+	});
 
 		// switch ($(".menu if uno").click()) {
 		// 	case expression:
