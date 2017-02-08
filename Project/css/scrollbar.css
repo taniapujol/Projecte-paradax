@@ -1,0 +1,39 @@
+/*aplicamos la propiedad overdlow:auto o scroll a los elementos que deseamos modificar*/
+html , #content1, #content2, #content3, #content4, #content5, #content6{
+  overflow: auto;
+}
+/* pegamos el css del generador de scrollbar de la web http://mikethedj4.github.io/Webkit-Scrollbar-Generator/*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fdaf0d;
+  border: 0px none #ff8000;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ff8000;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-track:active {
+  background: #c0c0c0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

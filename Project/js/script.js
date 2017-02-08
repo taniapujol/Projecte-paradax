@@ -19,6 +19,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").hide();
 			$("#content6").hide();
+			$(".peu_container").hide();
 		};
 
 	// Aplicamos el efecto scroll de transición del icono al menu
@@ -75,6 +76,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").hide();
 			$("#content6").hide();
+			$(".peu_container").show();
 		});
 		$("#dos").click(function(){
 			$("#content1").hide();
@@ -83,6 +85,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").hide();
 			$("#content6").hide();
+			$(".peu_container").show();
 		});
 		$("#tres").click(function(){
 			$("#content1").hide();
@@ -91,6 +94,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").hide();
 			$("#content6").hide();
+			$(".peu_container").show();
 		});
 		$("#cuatro").click(function(){
 			$("#content1").hide();
@@ -99,6 +103,7 @@ $(document).ready(function(){
 			$("#content4").show();
 			$("#content5").hide();
 			$("#content6").hide();
+			$(".peu_container").show();
 		});
 		$("#cinco").click(function(){
 			$("#content1").hide();
@@ -107,6 +112,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").show();
 			$("#content6").hide();
+			$(".peu_container").show();
 		});
 		$("#seis").click(function(){
 			$("#content1").hide();
@@ -115,6 +121,7 @@ $(document).ready(function(){
 			$("#content4").hide();
 			$("#content5").hide();
 			$("#content6").show();
+			$(".peu_container").show();
 		});
 	});
 // final del jquery sentencias
