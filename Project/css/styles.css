@@ -74,6 +74,7 @@ ul li a{
 	-moz-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
 	-o-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
 }
+/*Css de la etiqueta_scroll*/
 #etiqueta_scroll{
 	width: 100%;
 	overflow: hidden;
@@ -81,16 +82,17 @@ ul li a{
 }
 #scrolldown{
 	margin: auto;
-	width: 200px;
+	width: 400px;
 	height: 70px;
-	color:#aea8f0;
+	color:#fff;
 }
 #scrolldown p{
 	font-family: 'Pacifico', cursive;
-	font-size: 1.5em;
-	color: #fff;
+	font-size: 2.5em;
+	color: rgb(242, 183, 6);
 }
 #scrolldown i{padding-left: 20px}
+/*Css de la segunda parte*/
 #container{
 	width: 100%;
 	height: 100%;
@@ -112,19 +114,16 @@ ul li a{
 	overflow: auto;
 }
 /*css de los div content*/
-#content1, #content2, #content3, #content4{
+#content1, #content2, #content3, #content4, #content5, #content6{
 	width: 100%;
 	height: auto;
-	overflow: auto;;
-	}
-#content1 {background-color: blue;}
-#content2 {background-color: red;}
-#content3 {background-color: white;}
-#content4 {background-color: yellow;}
+	overflow: auto;
+	background-color: #fff;
+}
 /*css de la llista del container*/
 .menu{
 	float: right;
-	margin-top: 200px;
+	margin-top: 150px;
 	width: 25%;
 	z-index: 1;
 }
@@ -136,13 +135,13 @@ ul li a{
 	width: 100%;
 	border: solid 1px rgb(114, 209, 244);
 	border-radius: 20px 0 20px 0;
-	background-color:rgb(114, 209, 244);
+	background-color: rgba(10, 10, 10, 0.53);
 	text-align: center;
 	text-shadow: 2px 2px 8px #fff;
 	font-family: 'Pacifico', cursive;
 	font-size: 2em;
 }
-.uno {
+#uno {
 	-webkit-animation-duration: 3s;
   -webkit-animation-delay: 0s;
 	-moz-animation-duration: 3s;
@@ -150,7 +149,7 @@ ul li a{
 	-o-animation-duration: 3s;
   -0-animation-delay: 0s;
 }
-.dos {
+#dos {
 	-webkit-animation-duration: 3s;
   -webkit-animation-delay: 0.5s;
 	-moz-animation-duration: 3s;
@@ -158,7 +157,7 @@ ul li a{
 	-o-animation-duration: 3s;
   -0-animation-delay: 0.5s;
 }
-.tres {
+#tres {
 	-webkit-animation-duration: 3s;
   -webkit-animation-delay: 0.7s;
 	-moz-animation-duration: 3s;
@@ -166,7 +165,7 @@ ul li a{
 	-o-animation-duration: 3s;
   -0-animation-delay: 0.7s;
 }
-.cuatro{
+#cuatro{
 	-webkit-animation-duration: 3s;
   -webkit-animation-delay: 1s;
 	-moz-animation-duration: 3s;
@@ -174,4 +173,21 @@ ul li a{
 	-o-animation-duration: 3s;
   -0-animation-delay: 1s;
 }
-#uno:hover, #dos:hover, #tres:hover, #cuatro:hover {background-color: #fff}
+#cinco{
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1.2s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 1.2s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 1.2s;
+}
+#seis{
+	-webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1.5s;
+	-moz-animation-duration: 3s;
+	-moz-animation-delay: 1.5s;
+	-o-animation-duration: 3s;
+  -0-animation-delay: 1.5s;
+}
+/*Css en estado hover del menu*/
+#uno:hover, #dos:hover, #tres:hover, #cuatro:hover, #cinco:hover, #seis:hover {background-color: #fff}
