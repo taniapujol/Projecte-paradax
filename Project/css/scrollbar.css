@@ -1,3 +1,5 @@
+/*Css para activar el cambio de la scrollbar de la página y div que queremos, solo aplicable a 'Google Chrome'*/
+
 /*aplicamos la propiedad overdlow:auto o scroll a los elementos que deseamos modificar*/
 html , #content1, #content2, #content3, #content4, #content5, #content6{
   overflow: auto;
