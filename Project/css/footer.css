@@ -1,0 +1,34 @@
+/*Importando estilos de las fons de google font*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+/*Css para el diseño del pie de página*/
+footer{
+  position: fixed;
+	width: 100%;
+	height: 70px;
+  bottom: 0px;
+	left: 0px;
+  padding: 5px auto;
+	background-color: #000;
+	color:#fff;
+	font-family: 'Lobster', cursive;
+}
+.footer-copyright {
+  float: left;
+  width: 50%;
+}
+.social_link {
+  float: right;
+  width: 50%;
+}
+.social_link ul {
+  list-style-type: none;
+  float: right;
+  display: block;
+}
+.social_link li {
+  float: left;
+  padding-bottom: 5px;
+}
+.social_link a { text-decoration: none;}

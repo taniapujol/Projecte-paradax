@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Titulo de la página -->
+  <title>Indroducción a JQuery</title>
+  <!--Llamada a font awesone y google fonts  -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <!--Enlaces Css del diseño de la página -->
+  <link rel="stylesheet" href="css/header-nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/styles_introduccion.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <!--Enlace el favicon en la barra de navegación de Google, con tamaño 16x16. png  -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+  <!--Llamada al JQuery de Google y personal -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script async="text/javascript" src="js/script_introduccion.js"></script> -->
+  <script src="js/viewportchecker.js"></script>
+  <script type="text/javascript">
+//<![CDATA[
+window.onload = function(){
+
+var vLetter = document.getElementById('escritura');
+var iSpeedInk = 5;
+var sText = document.getElementById('escritura_src').innerHTML;
+var iCurChar = 0;
+var sChars = '<span>';
+var iCurInk = 0;
+var sCurCaret = '';
+var sCaret = " <img src='https://lh3.googleusercontent.com/-Ehd_BOpgE8w/UFdUuzwouvI/AAAAAAAAGD0/iHJqyah70Oo/s143/pluma.gif' style='position:absolute' />";
+
+var doStep = function () {
+var sChar = sText.charAt(iCurChar);
+var iDelay = 32;
+
+if (sChar == '') {
+sCurCaret = '';
+} else if (sChar == '|') {
+sChars = sChars.substring(0, sChars.length-1);
+iDelay = 64;
+} else if (sChar == '<') {
+var iPos = sText.indexOf('>', iCurChar);
+sChar = sText.substring(iCurChar, iPos + 1);
+iCurChar = iPos;
+} else if (sChar == '&') {
+var iPos = sText.indexOf(';', iCurChar);
+sChar = sText.substring(iCurChar, iPos + 1);
+iCurChar = iPos;
+} else if (sChar == '.') {
+iDelay = 300;
+} else if (sChar == ',') {
+iDelay = 100;
+} else if (sChar == ' ') {
+iDelay = 32;
+} else if (iCurChar > 5) {
+sCurCaret = sCaret;
+}
+
+// expenditure of ink
+if (sChar == ' ') {
+iCurInk += iSpeedInk;
+sChar = '</span><span style="color:RGB(' + (iCurInk) + ',' + (iCurInk) + ',' + (iCurInk) + ')">' + sChar;
+}
+
+if (document.getElementById('tintero').style.visibility == 'visible') {
+sCurCaret = sCaret;
+document.getElementById('tintero').style.visibility = 'hidden';
+sChar = '</span><span style="color:RGB(0,0,0)">' + sChar;
+}
+
+if (iCurInk > 160) {
+iCurInk = 0;
+document.getElementById('tintero').style.visibility = 'visible';
+iDelay = 1000;
+sCurCaret = '';
+}
+
+sChars += sChar;
+
+if (iCurChar == sText.length - 1)
+sCurCaret = '';
+
+vLetter.innerHTML = sChars + sCurCaret;
+
+iCurChar++;
+
+if (iCurChar < sText.length) {
+setTimeout(doStep, 20 + iDelay);
+}
+}
+
+doStep();
+};
+//]]>
+</script>
+</head>
+<body>
+  <wrapper>
+    <!--Empieza la cabecera y navegación de la página -->
+    <header>
+			<nav>
+				<ul>
+					<li>Primeros Pasos en JQuery</li>
+				</ul>
+				<img id="logo" src="img/logo.png">
+				<ul>
+					<li><a href="#">Introducció</a></li>
+					<li><a href="#">Videos</a></li>
+					<li><a href="#">Enllaços</a></li>
+				</ul>
+			</nav>
+		</header>
+    <!--Empieza el contenido de la página-->
+    <section>
+      <div id="escritura_src">
+        jQuery és una biblioteca multiplataforma de JavaScript, creada inicialment per John Resig,
+        que permet simplificar la manera d'interactuar amb els documents HTML, manipular l'arbre DOM
+        (docuent Object Model), manejar esdeveniments, desenvolupar animacions i afegir interacció amb
+        la tècnica AJAX a pàgines web. Va ser presentada el 14 de gener de 2006 al BarCamp NYC. jQuery
+        és la biblioteca de JavaScript més utilizada.<br>
+        JQuery és programari lliure i de codi obert, posseeix un doble llicenciament sota la <i>Llicència
+        MIT</i> i la <i>Llicència pública general de GNU v2</i>, permetent el seu ús en projectes lliures i privados.
+        JQuery, igual que altres biblioteques, ofereix una sèrie de funcionalitats basades en JavaScript
+        que d'altra manera requeririen de molt més codi, és a dir, amb les funcions pròpies d'aquesta
+        biblioteca s'aconsegueixen grans resultats en menys temps i espai.<br>
+        Un exemple pràctic és el que podem observar. l'efecte d'una ploma escrivint aquest document que
+        estem llegint. <br>
+        Aplicant un script, 2 imatges i un toc de CSS, aconseguirem aquesta animació per posar-la al nostre
+        blog o web. Tot el que escrivim anirà apareixent a poc a poc en la vostra pàgina com si ho estiguéssim
+        escrivint a mà amb una ploma antiga. Com podreu apreciar, la ploma a poc a poc es va quedant sense tinta,
+        quan això passa, ella mateixa es mulla en el tinter i torna a escriure amb el traç més nítid.
+      </div>
+      <div id="escritura"></div>
+      <img alt="tintero" id="tintero" src="img/tintero2.gif">
+    </section>
+    <!--Empieza del pie de la página -->
+    <footer>
+      <div class="footer-copyright">
+        <p>© 2017 Copyright by TaniaPujol</p>
+      </div>
+      <div class="social_link">
+        <ul>
+          <li><a class="facebook" href="#!"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+          <li><a class="google+" href="#!"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></li>
+          <li><a class="" href="#!"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </wrapper>
+</body>
+</html>
