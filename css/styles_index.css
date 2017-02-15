@@ -178,7 +178,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay: 0s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 0s;
+  -o-animation-delay: 0s;
 }
 #dos {
 	-webkit-animation-duration: 3s;
@@ -186,7 +186,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay:0. 5s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
 }
 #tres {
 	-webkit-animation-duration: 3s;
@@ -194,7 +194,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay: 0.7s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 0.7s;
+  -o-animation-delay: 0.7s;
 }
 #cuatro{
 	-webkit-animation-duration: 3s;
@@ -202,7 +202,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay: 1s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 1s;
+  -o-animation-delay: 1s;
 }
 #cinco{
 	-webkit-animation-duration: 3s;
@@ -210,7 +210,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay: 1.2s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
 }
 #seis{
 	-webkit-animation-duration: 3s;
@@ -218,7 +218,7 @@ declaradas para los diferentes operadores. */
 	-moz-animation-duration: 3s;
 	-moz-animation-delay: 1.5s;
 	-o-animation-duration: 3s;
-  -0-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
 }
 /*Css en estado hover del menu*/
 #uno:hover, #dos:hover, #tres:hover, #cuatro:hover, #cinco:hover, #seis:hover {background-color: #fff}

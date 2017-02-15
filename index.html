@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Titulo de la página  -->
+	<title>JQuery primeros pasos</title>
+	<!--Llamada a font awesone y google fonts  -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<!--Llamada a nuestro css y animacion.css-->
+	<link rel="stylesheet" href="css/styles_index.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="css/scrollbar.css">
+	<!--Enlace el favicon en la barra de navegación de Google, con tamaño 16x16. png  -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<!--Llamada al JQuery de Google y personal -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/script_index.js"></script>
+	<script src="js/viewportchecker.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<!-- Carga el fondo para scroll -->
+		<div id="fondo"></div>
+		<!--Declaración del menú navegación-->
+		<header>
+			<nav>
+				<ul>
+					<li>Primeros Pasos en JQuery</li>
+				</ul>
+				<img id="logo" src="img/logo.png">
+				<ul>
+					<li><a href="introduccion.html">Introducció</a></li>
+					<li><a href="videos.html">Videos</a></li>
+					<li><a href="enlaces.html">Enllaços</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- cuadro informativa para el usuario -->
+		<div id="etiqueta_scroll">
+			<div id="scrolldown">
+				<p>Scroll Down<i class="fa fa-hand-o-down" aria-hidden="true"></i></p>
+			</div>
+		</div>
+	</div>
+	<!-- Empieza el cuerpo de la página -->
+	<div id="container">
+		<div class="contenido">
+			<div id="content1">
+				<h2>Sintaxi bàsica: declaració de Variables i Operadors</h2>
+				<p>
+					En aquest apartat veurem un petit resum de com es declaren les variables i la seva utilitat. Així com la usualitat
+					i comprensió del operadors per a jquery.<br><br>
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Declaració d'una variable</b><br>
+					La seva sintaxi es: var nom_variable = 'cadena de caracters/valor/funció'.<br>
+					<span style="color:red">var</span><i>nom1</i><span style="color:green">= <i>'hola a tots' ;</i></span><br><br><br>
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Declaració de més d'una variable</b><br>
+					La seva sintaxi es la mateixa. Unicament les separament amb una ","<br>
+					<span style="color:red">var</span><i>nom1</i><span style="color:green">= <i>'hola a tots' ,</i></span><br>
+					<span style="color:red">var</span><i>valor</i><span style="color:green">= <i>5 ,</i></span><br>
+					<span style="color:red">var</span><i>funcio1</i><span style="color:green">= <i>function(){console.log("hola")} ;</i></span><br>
+					<span style="padding-left:10px">la tabulació millora la lectura del codi, però no té cap significat especial per el jquery <i class="fa fa-commenting" aria-hidden="true"></i></span><br><br>
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i><b>Operadors bàsics</b><br>
+					Els operadors bàsics permeten manipular el valors. Tenim diferets tipus : +, -, * , /,... que combinats entre ells podem obtenir diferents lectures.<br><br>
+					<span style="text-decoration: underline">Concatenació</span><br>
+					<span style="color:red">var</span><i>foo</i><span style="color:green">= <i>'Hola' ;</i></span><br>
+					<span style="color:red">var</span><i>bar</i><span style="color:green">= <i>'Tots' ;</i></span><br>
+					<i>console.log(foo <span style="color:green"> + ' ' +</span> bar);</i><span style="color:#1f38a3">// la consola de depuració mostra 'Hola Tots'</span><br>
+					<span style="text-decoration: underline">Multiplicació i divisió</span><br>
+					<span style="color:red">var</span><i>foo</i><span style="color:green">= <i> 2 * 3 ;</i></span><br>
+					<span style="color:red">var</span><i>bar</i><span style="color:green">= <i> 4 / 2 ;</i></span><br>
+					<i>console.log(foo <span style="color:green"> + ' ' +</span> bar);</i><span style="color:#1f38a3">// la consola de depuració mostra '8'</span><br>
+					<span style="text-decoration: underline">Augmentar i decrementar abans de una operació</span><br>
+					<span style="color:red">var</span><i> i </i><span style="color:green">= <i>1</i> ;</span><br>
+					<span style="color:red">var</span><i> j </i><span style="color:green">= ++<i>i</i> ;<span style="color:#1f38a3">// incrementació previa: j es igual a 2; i es igual a 2</span></span><br>
+					<span style="color:red">var</span><i> k </i><span style="color:green">= <i>i</i>++ ;<span style="color:#1f38a3">// incrementació posterios: k es igual a 2; i es igual a 3</span></span><br>
+					<span style="text-decoration: underline">Obligar a una cadena de caràcters actui com a un nombre.</span><br>
+					<span style="color:red">var</span><i>foo</i><span style="color:green">= <i> 1 ;</i></span><br>
+					<span style="color:red">var</span><i>bar</i><span style="color:green">= <i> '2' ;</i></span><br>
+					El constructor 'Number' obliga a la cadena a actua com a numero <br>
+					<i>console.log(foo <span style="color:green"> + Number(bar));</span></i><span style="color:#1f38a3">// la consola de depuració mostra '3'</span><br>
+					<span style="text-decoration: underline">Operadors lògics (AND i OR)</span><br>
+					Els operadors lògics permeten d'avaluar una sèrie d'operands. Donant com a solució verdader (true) o fals (false).L'operador OR (||) retorna el valor de l'operand primer, si això és cert; en cas contrari torna l'operand segon. Si ambdós operands són falses retorna fals (false). L'operardor AND (&&) retorna el valor de l'operand primer si això és fals; cas contrari torna l'operand segon. Quan ambdós valors són veritables retorna cert (true), però retorna fals. Veiem diferents casos.<br>
+					<span style="color:red">var</span><i> foo </i><span style="color:green">= <i>1 </i>;</span><br>
+					<span style="color:red">var</span><i> bar </i><span style="color:green">= <i>0 </i>; </span><br>
+					<span style="color:red">var</span><i> baz </i><span style="color:green">= <i>2 </i>; </span><br>
+					<i>foo</i><span style="color:green">||</span><i>bar;</i><span style="color:#1f38a3">// retorna 1, el cual es verdader (true)</span><br>
+					<i>bar</i><span style="color:green">||</span><i>foo;</i><span style="color:#1f38a3">// retorna 1, el cual es verdader (true)</span><br>
+					<i>foo</i><span style="color:green">&&</span><i>bar;</i><span style="color:#1f38a3">// retorna 0, el cual es falso (false)</span><br>
+					<i>foo</i><span style="color:green">&&</span><i>baz;</i><span style="color:#1f38a3">// retorna 2, el cual es verdader (true)</span><br>
+					<i>baz</i><span style="color:green">&&</span><i>foo;</i><span style="color:#1f38a3">// retorna 1, el cual es verdader (true)</span><br>
+					<span style="text-decoration: underline">Operadors de comparació</span><br>
+					Els operadors de comparació permeten comparar si certs valors són idèntics o equivalents.
+					<span style="color:red">var</span><i> foo </i><span style="color:green">= <i>1 </i>;</span><br>
+					<span style="color:red">var</span><i> bar </i><span style="color:green">= <i>0 </i>; </span><br>
+					<i>foo</i><span style="color:green">==</span><i>bar;</i><span style="color:#1f38a3">// el significa 'igual'</span><br>
+					<i>foo</i><span style="color:green">!=</span><i>bar;</i><span style="color:#1f38a3">// el significa 'diferent'</span><br>
+					<i>foo</i><span style="color:green">===</span><i>bar;</i><span style="color:#1f38a3">// el significa 'identic'</span><br>
+					<i>foo</i><span style="color:green">===</span><i>bar;</i><span style="color:#1f38a3">// el significa 'no identic'</span><br>
+					<i>foo</i><span style="color:green">&</span><i>bar;</i><span style="color:#1f38a3">// el significa 'major que'</span><br>
+					<i>foo</i><span style="color:green">&=</span><i>bar;</i><span style="color:#1f38a3">// el significa 'major o igual que'</span><br>
+					<i>foo</i><span style="color:green">&</span><i>bar;</i><span style="color:#1f38a3">// el significa 'menor que'</span><br>
+					<i>foo</i><span style="color:green">&=</span><i>bar;</i><span style="color:#1f38a3">// el significa 'menor o igual que'</span><br>
+				</p>
+			</div>
+			<div id="content2">
+				<p>
+				</p>
+			</div>
+			<div id="content3">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis distinctio magni minima et blanditiis velit,
+					doloremque, qui ipsa officia incidunt impedit molestiae praesentium, in architecto ullam! Ea labore praesentium
+					quibusdam.Velit veritatis esse ipsam nisi mollitia omnis dicta a veniam adipisci recusandae, obcaecati deleniti
+					totam ea tempore distinctio, iusto atque vitae est, laudantium culpa nam ex? Ad provident dolorem velit!
+				</p>
+			</div>
+			<div id="content4">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis distinctio magni minima et blanditiis velit,
+					doloremque, qui ipsa officia incidunt impedit molestiae praesentium, in architecto ullam! Ea labore praesentium
+					quibusdam.Velit veritatis esse ipsam nisi mollitia omnis dicta a veniam adipisci recusandae, obcaecati deleniti
+					totam ea tempore distinctio, iusto atque vitae est, laudantium culpa nam ex? Ad provident dolorem velit!
+				</p>
+			</div>
+			<div id="content5">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis distinctio magni minima et blanditiis velit,
+					doloremque, qui ipsa officia incidunt impedit molestiae praesentium, in architecto ullam! Ea labore praesentium
+					quibusdam.Velit veritatis esse ipsam nisi mollitia omnis dicta a veniam adipisci recusandae, obcaecati deleniti
+					totam ea tempore distinctio, iusto atque vitae est, laudantium culpa nam ex? Ad provident dolorem velit!
+				</p>
+			</div>
+			<div id="content6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis distinctio magni minima et blanditiis velit,
+					doloremque, qui ipsa officia incidunt impedit molestiae praesentium, in architecto ullam! Ea labore praesentium
+					quibusdam.Velit veritatis esse ipsam nisi mollitia omnis dicta a veniam adipisci recusandae, obcaecati deleniti
+					totam ea tempore distinctio, iusto atque vitae est, laudantium culpa nam ex? Ad provident dolorem velit!
+				</p>
+			</div>
+			<!-- Declaración de los botones de descarga y enlace a videos -->
+			<div class="peu_container">
+				<button class="button1" type="button" name="descarga"><i class="fa fa-download" aria-hidden="true"></i>pdf</button>
+				<button class="button2" type="button" name="video"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="menu">
+			<ul>
+				<li id="uno" class="post">Variables y Operadores</li>
+				<li id="dos" class="post">Condicionales</li>
+				<li id="tres" class="post">Ciclos</li>
+				<li id="cuatro" class="post">Metodo CSS</li>
+				<li id="cinco" class="post">Animacion</li>
+				<li id="seis" class="post">Scroll</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
