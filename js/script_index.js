@@ -61,6 +61,7 @@ $(document).ready(function(){
 			};
 
 	});
+	// Aplicamos la animación al menu
 	$(document).ready(function() {
 	    $('.post').addClass("hidden").viewportChecker({
 	        classToAdd: 'visible animated bounceInRight',
